@@ -73,7 +73,12 @@ const KhataBook = () => {
                     amount: _values?.payment
                 }],
                 khataObjId: value,
-                vendorName, time: _values?.quantity?.time
+                vendorName,
+                time: _values?.quantity?.time,
+                recievedTime: _values?.quantity?.recievedTime,
+                shippingCharges: _values?.quantity?.shippingCharges,
+                purchaseTime: _values?.quantity?.purchaseTime,
+                status: _values?.quantity?.status,
 
             };
             // Khata Account Object
@@ -83,7 +88,11 @@ const KhataBook = () => {
                 phoneNumber,
                 address,
                 items: [itemObj],
-                time: _values?.quantity?.time
+                time: _values?.quantity?.time,
+                recievedTime: _values?.quantity?.recievedTime,
+                shippingCharges: _values?.quantity?.shippingCharges,
+                purchaseTime: _values?.quantity?.purchaseTime,
+                status: _values?.quantity?.status,
             };
             // Retrieve existing khata book data from local storage
             const existingKhataBook: string | null = localStorage.getItem('khata-book');

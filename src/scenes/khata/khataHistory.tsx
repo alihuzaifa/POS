@@ -112,7 +112,7 @@ const KhataHistory = () => {
                     if (obj.time === getStockObj?.time) {
                         obj.quantity += getStockObj.quantity;
                         obj.time = obj?.time;
-                        obj.totalAmount = sum;
+                        obj.totalAmount = sum || 0;
                         if (obj.hasOwnProperty('id')) {
                             delete obj.id;
                         }
@@ -123,11 +123,11 @@ const KhataHistory = () => {
                     }
                 });
                 if (!found) {
-                    const { name, quantity, price, transactions, vendorName, time } = getStockObj
+                    const { name, quantity, price, transactions, vendorName, time, shippingCharges, status, purchaseTime, recievedTime } = getStockObj
                     const sum = transactions?.reduce((acc: any, obj: any) => {
                         return acc + obj?.amount
                     }, 0)
-                    const obj = { name, price, transactions, quantity, vendorName, time, totalAmount: sum }
+                    const obj = { name, price, transactions, quantity, vendorName, time, totalAmount: sum || 0, shippingCharges, status, purchaseTime, recievedTime }
                     parseStock.push(obj);
                 }
                 localStorage.setItem('stock', JSON.stringify(parseStock))

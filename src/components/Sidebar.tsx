@@ -95,10 +95,10 @@ const Sidebar: React.FC<SidebarProps> = ({
             text: "Quotation",
             icon: <InventoryOutlined />,
         },
-        {
-            text: "Bills Backup",
-            icon: <Backup />,
-        },
+        // {
+        //     text: "Bills Backup",
+        //     icon: <Backup />,
+        // },
         // {
         //     text: "Khata Backup",
         //     icon: <Backup />,
