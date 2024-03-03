@@ -11,7 +11,7 @@ import {
     Button,
 } from "@mui/material";
 import { DataGrid, GridToolbarColumnsButton, GridToolbarContainer, GridToolbarDensitySelector, GridToolbarQuickFilter } from "@mui/x-data-grid";
-import { Close, Delete, Edit, RemoveRedEye, StarOutlineSharp } from "@mui/icons-material";
+import { Close, Delete, Edit, RemoveRedEye } from "@mui/icons-material";
 import CustomModal from "../../components/CustomModal";
 import { groupTransactions } from "../../GroupBy";
 interface historyObject {
