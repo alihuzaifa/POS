@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "Main-Font";
+    src: url('./fonts/Shrikhand-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Sub-Font";
+    src: url('./fonts/LilitaOne-Regular.ttf');
+}
+
+@font-face {
+    font-family: "text";
+    src: url('./fonts/LibreFranklin-SemiBoldItalic.ttf');
+}
+
+.personal-font {
+    font-family: "Main-Font" !important;
+}
+
+.sub-font {
+    font-family: "Main-Font" !important;
+}
+
+.text {
+    font-family: "text" !important;
+}
+
+.circle {
+    width: 200px;
+    /* Adjust the size as needed */
+    height: 200px;
+    /* Adjust the size as needed */
+    border: 10px double black;
+    /* Adjust the border width and color */
+    border-radius: 50%;
+    /* Makes it a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.circle p {
+    margin: 0;
+    /* Remove default margins */
+}
