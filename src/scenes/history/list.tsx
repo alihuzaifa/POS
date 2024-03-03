@@ -34,7 +34,6 @@ const HistoryList = () => {
     const deleteSellItem = () => {
         const filterUser: any = list?.filter(({ uniqueId }: any) => uniqueId !== deleteObj?.uniqueId)
         let allItems: any[] = [];
-        // Iterate over each object in the array
         filterUser.forEach((obj: any) => {
             if (obj.hasOwnProperty('items')) {
                 allItems = allItems.concat(obj.items);
@@ -129,7 +128,6 @@ const HistoryList = () => {
         const year = currentDate.getFullYear();
         formattedDate = `${day} ${month} ${year}`;
     }
-    console.log("bills", bills)
     return (
         <Box m="1.5rem 2.5rem">
             <FlexBetween>
