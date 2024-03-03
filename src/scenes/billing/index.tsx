@@ -96,7 +96,7 @@ const Billing = ({ fb = false }) => {
         const existingData = localStorage.getItem('stock');
         const existingBilling = localStorage.getItem('billing');
         if (existingData) {
-            const parsedData = JSON.parse(existingData)
+            const parsedData = JSON.parse(existingData)?.filter(({ status }: { status: boolean }) => status === true)
             const result = groupTransactions(parsedData);
             const itemList = result?.map(({ name, time, history, transaction, vendorName }) => {
                 return { label: name, time, history, transaction, vendorName }
